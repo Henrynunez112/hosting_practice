@@ -3,6 +3,7 @@ import { useHttp } from '../util/customHooks';
 import {getAPI} from '../util/util'
 
 export default function PeopleSelect({personId, handleChange}) {
+    const API = getAPI();
     const [ data, isLoading] = useHttp(`${API}/users`)
     if(isLoading) return null; 
     return(
